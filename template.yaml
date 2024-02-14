@@ -4,11 +4,11 @@ kind: Template
 # some metadata about the template itself
 metadata:
   name: v1beta3-demo
-  title: Test Action template
-  description: scaffolder v1beta3 template demo
+  title: StoreFront Scaffold Storyblok
+  description: This scaffold allows you to create a new StoreFront Storyblok template with basic components and pages.
 spec:
   owner: backstage/techdocs-core
-  type: service
+  type: website
 
   # these are the steps which are rendered in the frontend with the form input
   parameters:
@@ -19,14 +19,14 @@ spec:
         name:
           title: Name
           type: string
-          description: Unique name of the component
+          description: Unique name of the component / artifact
           ui:autofocus: true
           ui:options:
             rows: 5
         owner:
           title: Owner
           type: string
-          description: Owner of the component
+          description: Owner of the component / artifact
           ui:field: OwnerPicker
           ui:options:
             catalogFilter:
@@ -54,12 +54,12 @@ spec:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
 
-    - id: fetch-docs
-      name: Fetch Docs
-      action: fetch:plain
-      input:
-        targetPath: ./community
-        url: https://github.com/backstage/community/tree/main/backstage-community-sessions
+    # - id: fetch-docs
+    #  name: Fetch Docs
+    #  action: fetch:plain
+    #  input:
+    #    targetPath: ./community
+    #    url: https://github.com/backstage/community/tree/main/backstage-community-sessions
 
     - id: publish
       name: Publish

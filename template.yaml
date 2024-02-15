@@ -47,9 +47,9 @@ spec:
   steps:
     - id: fetch-base
       name: Fetch Base
-      action: fetch:template
+      action: fetch:cookiecutter
       input:
-        url: ./template
+        url: https://github.com/leonardoleenen/storefront-storyblok-template
         values:
           name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}

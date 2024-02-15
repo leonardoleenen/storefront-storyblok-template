@@ -3,11 +3,11 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 # some metadata about the template itself
 metadata:
-  name: v1beta3-demo
-  title: StoreFront Scaffold Storyblok
+  name: sf-storyblok-commerce-tools
+  title: StoreFront Scaffold with Storyblok
   description: This scaffold allows you to create a new StoreFront Storyblok template with basic components and pages.
 spec:
-  owner: backstage/techdocs-core
+  owner: frontend-team
   type: website
 
   # these are the steps which are rendered in the frontend with the form input

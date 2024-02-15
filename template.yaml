@@ -47,7 +47,7 @@ spec:
   steps:
     - id: fetch-base
       name: Fetch Base
-      action: fetch:cookiecutter
+      action: fetch:plain
       input:
         url: https://github.com/leonardoleenen/storefront-storyblok-template
         values:

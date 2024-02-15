@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ parameters.name }}
+  name: StoreFront Ecommerce Site
   description: StoreFront site for general use
   tags:
     - nextjs14

@@ -3,11 +3,6 @@ kind: Component
 metadata:
   name: ${{ parameters.name }}
   description: StoreFront site for general use
-  labels:
-    example.com/custom: custom_label_value
-  annotations:
-    example.com/service-discovery: artistweb
-    circleci.com/project-slug: github/example-org/artist-website
   tags:
     - nextjs14
     - storyblock
@@ -15,11 +10,11 @@ metadata:
     - typescript
   links:
     - url: https://admin.example-org.com
-      title: Admin Dashboard
-      icon: dashboard
-      type: admin-dashboard
+      title: Ecommerce StoreFront
+      icon: cart
+      type: ecommerce-storefront
 spec:
   type: website
   lifecycle: production
-  owner: artist-relations-team
-  system: public-websites
+  owner: frontend-team
+  system: ecommerce-site

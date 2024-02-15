@@ -1,1 +1,0 @@
-class CartProxy implements CartActions {}

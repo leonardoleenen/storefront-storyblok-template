@@ -10,8 +10,8 @@ metadata:
     circleci.com/project-slug: github/example-org/artist-website
   tags:
     - nextjs14
-    - Storyblok
-    - tailwindCSS
+    - storyblock
+    - tailwindcss
     - typescript
   links:
     - url: https://admin.example-org.com

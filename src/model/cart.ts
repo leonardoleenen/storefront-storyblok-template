@@ -1,28 +1,35 @@
-import { VariantType } from "./product";
+import { DiscountType, MoneyType, TaxType } from './general';
+import { VariantType } from './product';
 
-export type LineItemType = {
-  id: string;
-  quantity: number;
-  item: VariantType;
+export type ContactInfoType = {
+	email: string;
+	phone: string;
+	address: string;
 };
 
-abstract class Cart {
-  abstract addItem(item: VariantType, quantity: number): void;
-}
+export type LineItemType = {
+	price: MoneyType;
+	product: VariantType;
+	quantity: number;
+	discounts: DiscountType[];
+	taxes: TaxType;
+};
 
-class CartBuilder {
-  private cart: Cart;
+export type ShippingMethodType = {
+	id: string;
+	name: string;
+	description: string;
+	price?: MoneyType;
+};
 
-  constructor(cart: Cart) {
-    this.cart = cart;
-  }
+export type CalculationCartType = {
+	shipping_total?: MoneyType;
+	shipping_tax_total?: MoneyType;
+	discount_total?: MoneyType;
+	item_tax_total?: MoneyType;
+	tax_total?: MoneyType;
+	subtotal: MoneyType;
+	total: MoneyType;
+};
 
-  addItem(item: VariantType, quantity: number) {
-    this.cart.addItem(item, quantity);
-    return this;
-  }
-
-  buid(): Cart {
-    return this.cart;
-  }
-}
+export const CartPaymentStatusType = 'pending' || 'no_complted' || 'completed';
